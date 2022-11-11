@@ -51,7 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cbFilterByCity = new System.Windows.Forms.ComboBox();
             this.cbFilterByCountry = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMember = new System.Windows.Forms.DataGridView();
             this.btnMemberAdd = new System.Windows.Forms.Button();
             this.btnMemberUpdate = new System.Windows.Forms.Button();
             this.btnMemberDelete = new System.Windows.Forms.Button();
@@ -78,7 +78,7 @@
             this.txtToInput = new System.Windows.Forms.TextBox();
             this.txtFromInput = new System.Windows.Forms.TextBox();
             this.txtProductSearch = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.btnProductAdd = new System.Windows.Forms.Button();
             this.btnProductUpdate = new System.Windows.Forms.Button();
             this.btnProductDelete = new System.Windows.Forms.Button();
@@ -95,23 +95,23 @@
             this.label24 = new System.Windows.Forms.Label();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtWeight_Order = new System.Windows.Forms.TextBox();
+            this.txtFreight = new System.Windows.Forms.TextBox();
             this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
             this.dtpRequiredDate = new System.Windows.Forms.DateTimePicker();
             this.dtpShippedDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -242,6 +242,7 @@
             this.btnMemberSearch.TabIndex = 14;
             this.btnMemberSearch.Text = "Search";
             this.btnMemberSearch.UseVisualStyleBackColor = true;
+            this.btnMemberSearch.Click += new System.EventHandler(this.btnMemberSearch_Click);
             // 
             // rbMemberIDSearch
             // 
@@ -319,15 +320,16 @@
             this.cbFilterByCountry.Size = new System.Drawing.Size(289, 33);
             this.cbFilterByCountry.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvMember
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(836, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(597, 275);
-            this.dataGridView1.TabIndex = 14;
+            this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMember.Location = new System.Drawing.Point(836, 86);
+            this.dgvMember.Name = "dgvMember";
+            this.dgvMember.RowHeadersWidth = 62;
+            this.dgvMember.RowTemplate.Height = 33;
+            this.dgvMember.Size = new System.Drawing.Size(597, 275);
+            this.dgvMember.TabIndex = 14;
+            this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
             // 
             // btnMemberAdd
             // 
@@ -337,6 +339,7 @@
             this.btnMemberAdd.TabIndex = 15;
             this.btnMemberAdd.Text = "Add";
             this.btnMemberAdd.UseVisualStyleBackColor = true;
+            this.btnMemberAdd.Click += new System.EventHandler(this.btnMemberAdd_Click);
             // 
             // btnMemberUpdate
             // 
@@ -346,6 +349,7 @@
             this.btnMemberUpdate.TabIndex = 16;
             this.btnMemberUpdate.Text = "Update";
             this.btnMemberUpdate.UseVisualStyleBackColor = true;
+            this.btnMemberUpdate.Click += new System.EventHandler(this.btnMemberUpdate_Click);
             // 
             // btnMemberDelete
             // 
@@ -355,6 +359,7 @@
             this.btnMemberDelete.TabIndex = 17;
             this.btnMemberDelete.Text = "Delete";
             this.btnMemberDelete.UseVisualStyleBackColor = true;
+            this.btnMemberDelete.Click += new System.EventHandler(this.btnMemberDelete_Click);
             // 
             // label11
             // 
@@ -479,6 +484,7 @@
             this.btnProductSearch.TabIndex = 31;
             this.btnProductSearch.Text = "Search";
             this.btnProductSearch.UseVisualStyleBackColor = true;
+            this.btnProductSearch.Click += new System.EventHandler(this.btnProductSearch_Click);
             // 
             // rbUnitsInStockSeach
             // 
@@ -563,15 +569,16 @@
             this.txtProductSearch.Size = new System.Drawing.Size(289, 31);
             this.txtProductSearch.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgvProduct
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(836, 452);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 33;
-            this.dataGridView2.Size = new System.Drawing.Size(597, 361);
-            this.dataGridView2.TabIndex = 14;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Location = new System.Drawing.Point(836, 452);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.RowHeadersWidth = 62;
+            this.dgvProduct.RowTemplate.Height = 33;
+            this.dgvProduct.Size = new System.Drawing.Size(597, 361);
+            this.dgvProduct.TabIndex = 14;
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
             // btnProductAdd
             // 
@@ -581,6 +588,7 @@
             this.btnProductAdd.TabIndex = 15;
             this.btnProductAdd.Text = "Add";
             this.btnProductAdd.UseVisualStyleBackColor = true;
+            this.btnProductAdd.Click += new System.EventHandler(this.btnProductAdd_Click);
             // 
             // btnProductUpdate
             // 
@@ -590,6 +598,7 @@
             this.btnProductUpdate.TabIndex = 16;
             this.btnProductUpdate.Text = "Update";
             this.btnProductUpdate.UseVisualStyleBackColor = true;
+            this.btnProductUpdate.Click += new System.EventHandler(this.btnProductUpdate_Click);
             // 
             // btnProductDelete
             // 
@@ -599,6 +608,7 @@
             this.btnProductDelete.TabIndex = 17;
             this.btnProductDelete.Text = "Delete";
             this.btnProductDelete.UseVisualStyleBackColor = true;
+            this.btnProductDelete.Click += new System.EventHandler(this.btnProductDelete_Click);
             // 
             // label19
             // 
@@ -681,6 +691,7 @@
             this.btnOrderSearch.TabIndex = 31;
             this.btnOrderSearch.Text = "Search";
             this.btnOrderSearch.UseVisualStyleBackColor = true;
+            this.btnOrderSearch.Click += new System.EventHandler(this.btnOrderSearch_Click);
             // 
             // label25
             // 
@@ -714,15 +725,16 @@
             this.dtpStartDate.Size = new System.Drawing.Size(300, 31);
             this.dtpStartDate.TabIndex = 0;
             // 
-            // dataGridView3
+            // dgvOrder
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(836, 930);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 33;
-            this.dataGridView3.Size = new System.Drawing.Size(597, 348);
-            this.dataGridView3.TabIndex = 14;
+            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.Location = new System.Drawing.Point(836, 930);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.RowHeadersWidth = 62;
+            this.dgvOrder.RowTemplate.Height = 33;
+            this.dgvOrder.Size = new System.Drawing.Size(597, 348);
+            this.dgvOrder.TabIndex = 14;
+            this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
             // 
             // btnLogout
             // 
@@ -732,6 +744,7 @@
             this.btnLogout.TabIndex = 34;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnExit
             // 
@@ -741,6 +754,7 @@
             this.btnExit.TabIndex = 34;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label26
             // 
@@ -765,16 +779,16 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(31, 1253);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 25);
+            this.label28.Size = new System.Drawing.Size(67, 25);
             this.label28.TabIndex = 31;
-            this.label28.Text = "Weight";
+            this.label28.Text = "Freight";
             // 
-            // txtWeight_Order
+            // txtFreight
             // 
-            this.txtWeight_Order.Location = new System.Drawing.Point(196, 1247);
-            this.txtWeight_Order.Name = "txtWeight_Order";
-            this.txtWeight_Order.Size = new System.Drawing.Size(150, 31);
-            this.txtWeight_Order.TabIndex = 32;
+            this.txtFreight.Location = new System.Drawing.Point(196, 1247);
+            this.txtFreight.Name = "txtFreight";
+            this.txtFreight.Size = new System.Drawing.Size(150, 31);
+            this.txtFreight.TabIndex = 32;
             // 
             // dtpOrderDate
             // 
@@ -805,7 +819,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.txtWeight_Order);
+            this.Controls.Add(this.txtFreight);
             this.Controls.Add(this.dtpShippedDate);
             this.Controls.Add(this.dtpRequiredDate);
             this.Controls.Add(this.dtpOrderDate);
@@ -838,9 +852,9 @@
             this.Controls.Add(this.btnProductAdd);
             this.Controls.Add(this.btnMemberUpdate);
             this.Controls.Add(this.btnMemberAdd);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOrder);
+            this.Controls.Add(this.dgvProduct);
+            this.Controls.Add(this.dgvMember);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtCountry);
@@ -858,17 +872,18 @@
             this.Controls.Add(this.label1);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -899,7 +914,7 @@
         private Label label9;
         private ComboBox cbFilterByCity;
         private ComboBox cbFilterByCountry;
-        private DataGridView dataGridView1;
+        private DataGridView dgvMember;
         private Button btnMemberAdd;
         private Button btnMemberUpdate;
         private Button btnMemberDelete;
@@ -926,7 +941,7 @@
         private TextBox txtToInput;
         private TextBox txtFromInput;
         private TextBox txtProductSearch;
-        private DataGridView dataGridView2;
+        private DataGridView dgvProduct;
         private Button btnProductAdd;
         private Button btnProductUpdate;
         private Button btnProductDelete;
@@ -943,13 +958,13 @@
         private Label label24;
         private DateTimePicker dtpEndDate;
         private DateTimePicker dtpStartDate;
-        private DataGridView dataGridView3;
+        private DataGridView dgvOrder;
         private Button btnLogout;
         private Button btnExit;
         private Label label26;
         private Label label27;
         private Label label28;
-        private TextBox txtWeight_Order;
+        private TextBox txtFreight;
         private DateTimePicker dtpOrderDate;
         private DateTimePicker dtpRequiredDate;
         private DateTimePicker dtpShippedDate;

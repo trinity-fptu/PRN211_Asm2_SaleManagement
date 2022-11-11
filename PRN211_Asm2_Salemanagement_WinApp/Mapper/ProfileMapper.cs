@@ -17,7 +17,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp.Mapper
             CreateMap<MemberMapper, Member>();
 
             IMemberRepo memberRepo = new MemberRepo();
-            
+            //IOrderDetailRepo orderDetailRepo = new OrderDetailRepo();
         }
     }
 }
