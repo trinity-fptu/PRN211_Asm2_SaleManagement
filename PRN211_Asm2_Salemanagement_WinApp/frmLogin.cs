@@ -43,7 +43,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                 {
                     frmAdmin adminForm = new frmAdmin
                     {
-                        MemberLogin = memberMapper,
+                        MemberMapper = memberMapper,
                         MemberRepo = memberRepo,
                     };
                     adminForm.Closed += (s, args) => this.Close();
@@ -64,13 +64,13 @@ namespace PRN211_Asm2_Salemanagement_WinApp
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            txtEmail.Text = "";
-            txtPassword.Text = "";
+            txtEmail.ResetText();
+            txtPassword.ResetText();
         }
     }
 }

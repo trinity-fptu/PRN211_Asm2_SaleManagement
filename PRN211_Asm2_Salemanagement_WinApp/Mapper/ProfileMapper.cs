@@ -14,10 +14,10 @@ namespace PRN211_Asm2_Salemanagement_WinApp.Mapper
         public ProfileMapper()
         {
             CreateMap<Member, MemberMapper>();
-            CreateMap<MemberMapper, Member>();
-
-            IMemberRepo memberRepo = new MemberRepo();
-            //IOrderDetailRepo orderDetailRepo = new OrderDetailRepo();
+            CreateMap<Order, OrderMapper>().ForMember(x => x.OrderDate,
+                opt => opt.MapFrom(x => x.OrderDate.Date));
+            CreateMap<Product, ProductMapper>();
+            CreateMap<OrderDetail, OrderDetailMapper>();
         }
     }
 }

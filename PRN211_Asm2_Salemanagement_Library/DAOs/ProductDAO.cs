@@ -86,17 +86,9 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             {
                 using (var db = new SaleManagermentContext())
                 {
-                    //Check if product id or name is existed
-                    if (db.Products.Find(product.ProductId) != null || db.Products.Where(p => p.ProductName == product.ProductName).FirstOrDefault() != null)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        db.Products.Add(product);
-                        db.SaveChanges();
-                        return true;
-                    }
+                    db.Products.Add(product);
+                    db.SaveChanges();
+                    return true;
                 }
             }
             catch (Exception e)
@@ -113,11 +105,6 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             {
                 using (var db = new SaleManagermentContext())
                 {
-                    //Check duplicate product name
-                    if (db.Products.Where(p => p.ProductName == product.ProductName).FirstOrDefault() != null)
-                    {
-                        return false;
-                    }
                     db.Products.Update(product);
                     db.SaveChanges();
                     return true;
@@ -139,7 +126,8 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
                 {
                     var product = db.Products.Find(id);
                     db.Products.Remove(product);
-                    return db.SaveChanges() > 0;
+                    db.SaveChanges();
+                    return true;
                 }
             }
             catch (Exception e)

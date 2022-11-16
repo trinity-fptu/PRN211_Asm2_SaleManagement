@@ -13,6 +13,8 @@ namespace PRN211_Asm2_Salemanagement_WinApp.Mapper
         public int MemberID { get; set; }
         [DisplayName("Email")]
         public string Email { get; set; }
+        [DisplayName("Company Name")]
+        public string CompanyName { get; set; }
         [DisplayName("Password")]
         public string Password { get; set; }
         [DisplayName("City")]

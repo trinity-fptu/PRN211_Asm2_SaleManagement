@@ -105,6 +105,12 @@
             this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
             this.dtpRequiredDate = new System.Windows.Forms.DateTimePicker();
             this.dtpShippedDate = new System.Windows.Forms.DateTimePicker();
+            this.btnDetail = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.btnProductRefresh = new System.Windows.Forms.Button();
+            this.btnOrderRefresh = new System.Windows.Forms.Button();
+            this.btnMemberRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
@@ -153,7 +159,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 147);
+            this.label5.Location = new System.Drawing.Point(34, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 25);
             this.label5.TabIndex = 4;
@@ -195,7 +201,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(196, 144);
+            this.txtEmail.Location = new System.Drawing.Point(198, 128);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(150, 31);
             this.txtEmail.TabIndex = 9;
@@ -311,6 +317,7 @@
             this.cbFilterByCity.Name = "cbFilterByCity";
             this.cbFilterByCity.Size = new System.Drawing.Size(289, 33);
             this.cbFilterByCity.TabIndex = 1;
+            this.cbFilterByCity.SelectedIndexChanged += new System.EventHandler(this.cbFilterByCity_SelectedIndexChanged);
             // 
             // cbFilterByCountry
             // 
@@ -319,6 +326,7 @@
             this.cbFilterByCountry.Name = "cbFilterByCountry";
             this.cbFilterByCountry.Size = new System.Drawing.Size(289, 33);
             this.cbFilterByCountry.TabIndex = 0;
+            this.cbFilterByCountry.SelectedIndexChanged += new System.EventHandler(this.cbFilterByCountry_SelectedIndexChanged);
             // 
             // dgvMember
             // 
@@ -811,11 +819,71 @@
             this.dtpShippedDate.Size = new System.Drawing.Size(150, 31);
             this.dtpShippedDate.TabIndex = 0;
             // 
+            // btnDetail
+            // 
+            this.btnDetail.Location = new System.Drawing.Point(1484, 930);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(112, 34);
+            this.btnDetail.TabIndex = 35;
+            this.btnDetail.Text = "See detail";
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(32, 167);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(141, 25);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Company Name";
+            // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Location = new System.Drawing.Point(196, 164);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(150, 31);
+            this.txtCompanyName.TabIndex = 9;
+            // 
+            // btnProductRefresh
+            // 
+            this.btnProductRefresh.Location = new System.Drawing.Point(1484, 776);
+            this.btnProductRefresh.Name = "btnProductRefresh";
+            this.btnProductRefresh.Size = new System.Drawing.Size(112, 34);
+            this.btnProductRefresh.TabIndex = 36;
+            this.btnProductRefresh.Text = "Refresh";
+            this.btnProductRefresh.UseVisualStyleBackColor = true;
+            this.btnProductRefresh.Click += new System.EventHandler(this.btnProductRefresh_Click);
+            // 
+            // btnOrderRefresh
+            // 
+            this.btnOrderRefresh.Location = new System.Drawing.Point(1484, 1244);
+            this.btnOrderRefresh.Name = "btnOrderRefresh";
+            this.btnOrderRefresh.Size = new System.Drawing.Size(112, 34);
+            this.btnOrderRefresh.TabIndex = 36;
+            this.btnOrderRefresh.Text = "Refresh";
+            this.btnOrderRefresh.UseVisualStyleBackColor = true;
+            this.btnOrderRefresh.Click += new System.EventHandler(this.btnOrderRefresh_Click);
+            // 
+            // btnMemberRefresh
+            // 
+            this.btnMemberRefresh.Location = new System.Drawing.Point(1484, 330);
+            this.btnMemberRefresh.Name = "btnMemberRefresh";
+            this.btnMemberRefresh.Size = new System.Drawing.Size(112, 34);
+            this.btnMemberRefresh.TabIndex = 36;
+            this.btnMemberRefresh.Text = "Refresh";
+            this.btnMemberRefresh.UseVisualStyleBackColor = true;
+            this.btnMemberRefresh.Click += new System.EventHandler(this.btnMemberRefresh_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1618, 1365);
+            this.Controls.Add(this.btnOrderRefresh);
+            this.Controls.Add(this.btnMemberRefresh);
+            this.Controls.Add(this.btnProductRefresh);
+            this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupBox4);
@@ -860,10 +928,12 @@
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtCompanyName);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -968,5 +1038,11 @@
         private DateTimePicker dtpOrderDate;
         private DateTimePicker dtpRequiredDate;
         private DateTimePicker dtpShippedDate;
+        private Button btnDetail;
+        private Label label29;
+        private TextBox txtCompanyName;
+        private Button btnProductRefresh;
+        private Button btnOrderRefresh;
+        private Button btnMemberRefresh;
     }
 }

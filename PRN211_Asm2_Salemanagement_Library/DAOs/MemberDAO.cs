@@ -120,17 +120,9 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             try
             {
                 var db = new SaleManagermentContext();
-                //Check duplicate id and email
-                if (db.Members.Find(member.MemberId) == null && db.Members.FirstOrDefault(m => m.Email == member.Email) == null)
-                {
-                    db.Members.Add(member);
-                    db.SaveChanges();
-                    result = true;
-                }
-                else
-                {
-                    throw new Exception("Member id or email is existed!");
-                }
+                db.Members.Add(member);
+                db.SaveChanges();
+                result = true;
             }
             catch (Exception e)
             {
@@ -146,17 +138,9 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             try
             {
                 var db = new SaleManagermentContext();
-                //Check duplicate email
-                if (db.Members.FirstOrDefault(m => m.Email == member.Email && m.MemberId != member.MemberId) == null)
-                {
-                    db.Members.Update(member);
-                    db.SaveChanges();
-                    result = true;
-                }
-                else
-                {
-                    throw new Exception("Member email is existed!");
-                }
+                db.Members.Update(member);
+                db.SaveChanges();
+                result = true;
             }
             catch (Exception e)
             {
@@ -173,15 +157,142 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             {
                 var db = new SaleManagermentContext();
                 Member member = db.Members.Find(id);
-                if (member != null)
+                db.Members.Remove(member);
+                db.SaveChanges();
+                result = true;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return result;
+        }
+
+        //Search member by id
+        public IEnumerable<Member> SearchMemberById(int id)
+        {
+            IEnumerable<Member> members = null;
+            try
+            {
+                var db = new SaleManagermentContext();
+                members = db.Members.Where(m => m.MemberId == id);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return members;
+        }
+
+        //Search member by email
+        public IEnumerable<Member> SearchMemberByEmail(string email)
+        {
+            IEnumerable<Member> members = null;
+            try
+            {
+                var db = new SaleManagermentContext();
+                members = db.Members.Where(m => m.Email.Contains(email));
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return members;
+        }
+
+        //Get city list
+        public IEnumerable<string> GetCityList()
+        {
+            IEnumerable<string> cities = null;
+            try
+            {
+                var db = new SaleManagermentContext();
+                cities = db.Members.Select(m => m.City).Distinct();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return cities;
+        }
+
+        //Get country list
+        public IEnumerable<string> GetCountryList()
+        {
+            IEnumerable<string> countries = null;
+            try
+            {
+                var db = new SaleManagermentContext();
+                countries = db.Members.Select(m => m.Country).Distinct();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return countries;
+        }
+
+        //Filter member by city
+        public IEnumerable<Member> FilterMemberByCity(string city)
+        {
+            IEnumerable<Member> members = null;
+            try
+            {
+                var db = new SaleManagermentContext();
+                members = db.Members.Where(m => m.City == city);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return members;
+        }
+
+        //Filter member by country
+        public IEnumerable<Member> FilterMemberByCountry(string country)
+        {
+            IEnumerable<Member> members = null;
+            try
+            {
+                var db = new SaleManagermentContext();
+                members = db.Members.Where(m => m.Country == country);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return members;
+        }
+
+        //Check duplicate id
+        public bool CheckDuplicateId(int id)
+        {
+            bool result = false;
+            try
+            {
+                var db = new SaleManagermentContext();
+                if (db.Members.Find(id) != null)
                 {
-                    db.Members.Remove(member);
-                    db.SaveChanges();
                     result = true;
                 }
-                else
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return result;
+        }
+
+        //Check duplicate email
+        public bool CheckDuplicateEmail(string email)
+        {
+            bool result = false;
+            try
+            {
+                var db = new SaleManagermentContext();
+                if (db.Members.FirstOrDefault(m => m.Email == email) != null)
                 {
-                    throw new Exception("Member id does not existed!");
+                    result = true;
                 }
             }
             catch (Exception e)

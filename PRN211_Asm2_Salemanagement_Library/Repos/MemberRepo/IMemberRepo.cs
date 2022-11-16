@@ -16,5 +16,13 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.MemberRepo
         public bool AddMember(Member member);
         public bool UpdateMember(Member member);
         public bool DeleteMember(int id);
+        public IEnumerable<Member> SearchMemberById(int id);
+        public IEnumerable<Member> SearchMemberByEmail(string email);
+        public IEnumerable<string> GetCityList();
+        public IEnumerable<string> GetCountryList();
+        public IEnumerable<Member> FilterMemberByCity(string city);
+        public IEnumerable<Member> FilterMemberByCountry(string country);
+        public bool CheckDuplicateEmail(string email);
+        public bool CheckDuplicateId(int id);
     }
 }
