@@ -160,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmOrderDetail";
             this.Text = "frmOrderDetail";
+            this.Load += new System.EventHandler(this.frmOrderDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

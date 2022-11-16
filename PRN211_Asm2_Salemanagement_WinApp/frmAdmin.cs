@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AutoMapper;
 using PRN211_Asm2_Salemanagement_Library.Models;
 using PRN211_Asm2_Salemanagement_Library.Repos.MemberRepo;
+using PRN211_Asm2_Salemanagement_Library.Repos.OrderDetailRepo;
 using PRN211_Asm2_Salemanagement_Library.Repos.OrderRepo;
 using PRN211_Asm2_Salemanagement_Library.Repos.ProductRepo;
 using PRN211_Asm2_Salemanagement_WinApp.Mapper;
@@ -21,11 +22,11 @@ namespace PRN211_Asm2_Salemanagement_WinApp
         public MemberMapper MemberMapper { get; set; }
         public ProductMapper ProductMapper { get; set; }
         public OrderMapper OrderMapper { get; set; }
-        //public OrderDetailMapper OrderDetailMapper { get; set; }
+        public OrderDetailMapper OrderDetailMapper { get; set; }
         public IMemberRepo MemberRepo { get; set; }
         public IProductRepo ProductRepo { get; set; }
         public IOrderRepo OrderRepo { get; set; }
-        //public IOrderDetailRepo OrderDetailRepo { get; set; }
+        public IOrderDetailRepo OrderDetailRepo { get; set; }
         
         private IMapper mapper;
 
@@ -94,13 +95,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            txtOrderID.Text = dgvOrder.Rows[rowIndex].Cells[0].Value.ToString();
-            txtMemberID_Order.Text = dgvOrder.Rows[rowIndex].Cells[1].Value.ToString();
-            dtpOrderDate.Text = dgvOrder.Rows[rowIndex].Cells[2].Value.ToString();
-            dtpRequiredDate.Text = dgvOrder.Rows[rowIndex].Cells[3].Value.ToString();
-            dtpShippedDate.Text = dgvOrder.Rows[rowIndex].Cells[4].Value.ToString();
-            txtFreight.Text = dgvOrder.Rows[rowIndex].Cells[5].Value.ToString();
+            
         }
 
         private void btnMemberSearch_Click(object sender, EventArgs e)
@@ -129,10 +124,6 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                 {
                     dgvMember.DataSource = members.ToList();
                 }
-                else
-                {
-                    MessageBox.Show("No member found");
-                }
             }
         }
 
@@ -142,11 +133,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             string searchFromInput = txtFromInput.Text;
             string searchToInput = txtToInput.Text;
             IEnumerable<Product> sProduct = null;
-            if (string.IsNullOrWhiteSpace(searchProductString) || string.IsNullOrWhiteSpace(searchFromInput) && string.IsNullOrWhiteSpace(searchToInput))
-            {
-                MessageBox.Show("Please enter something to search");
-            }
-            else
+            if (!string.IsNullOrWhiteSpace(searchProductString))
             {
                 if (rbProductIDSearch.Checked)
                 {
@@ -156,17 +143,23 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                 {
                     sProduct = ProductRepo.SearchProductByName(searchProductString);
                 }
-                else if (rbUnitPriceSearch.Checked)
+            }
+            else if (!string.IsNullOrWhiteSpace(searchFromInput) || !string.IsNullOrWhiteSpace(searchToInput))
+            {
+                if (rbUnitPriceSearch.Checked)
                 {
                     sProduct = ProductRepo.SearchProductByPriceRange(int.Parse(searchFromInput), int.Parse(searchToInput));
                 }
                 else if (rbUnitsInStockSeach.Checked)
                 {
-                    sProduct = ProductRepo.SearchProductByUnitInStockRange(int.Parse(searchFromInput), int.Parse(searchToInput));   
+                    sProduct = ProductRepo.SearchProductByUnitInStockRange(int.Parse(searchFromInput), int.Parse(searchToInput));
                 }
             }
-            //Refresh datagridview
-            using (var db = new SaleManagermentContext())
+            else
+            {
+                MessageBox.Show("Please enter the keyword to search");
+            }
+            if (sProduct != null)
             {
                 dgvProduct.DataSource = sProduct.ToList();
             }
@@ -183,7 +176,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             else
             {
                 IEnumerable<Order> orders = OrderRepo.GetOrdersByDateRange(startDate, endDate);
-                dgvOrder.DataSource = orders;
+                dgvOrder.DataSource = orders.ToList();
             }
         }
 
@@ -421,6 +414,11 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             {
                 dgvOrder.DataSource = db.Orders.ToList();
             }
+        }
+
+        private void dgvOrder_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

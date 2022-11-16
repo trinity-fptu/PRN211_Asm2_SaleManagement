@@ -743,6 +743,7 @@
             this.dgvOrder.Size = new System.Drawing.Size(597, 348);
             this.dgvOrder.TabIndex = 14;
             this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
+            this.dgvOrder.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellDoubleClick);
             // 
             // btnLogout
             // 
