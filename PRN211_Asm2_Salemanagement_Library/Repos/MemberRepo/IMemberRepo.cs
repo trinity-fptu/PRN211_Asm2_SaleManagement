@@ -9,6 +9,7 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.MemberRepo
 {
     public interface IMemberRepo
     {
+
         public IEnumerable<Member> GetAllMembers();
         public Member Login(string email, string password);
         public Member GetMemberById(int id);

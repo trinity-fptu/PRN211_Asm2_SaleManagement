@@ -53,6 +53,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                 else
                 {
                     frmMember memberForm = new frmMember();
+                    frmMember.MemberEmail = email;
                     memberForm.Show();
                 }
             }

@@ -24,5 +24,7 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.OrderRepo
             OrderDAO.Instance.SearchOrderByDateRange(startDate, endDate);
 
         public bool UpdateOrder(Order order) => OrderDAO.Instance.UpdateOrder(order);
+
+        public IEnumerable<Order> GetOrderListByMemberId(int id) => OrderDAO.Instance.GetOrderListByMemberId(id);
     }
 }

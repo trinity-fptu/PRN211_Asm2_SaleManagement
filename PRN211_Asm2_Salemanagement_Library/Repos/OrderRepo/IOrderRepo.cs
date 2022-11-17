@@ -17,5 +17,7 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.OrderRepo
         public bool DeleteOrder(int id);
 
         public Order GetOrderByMemberId(int id);
+
+        public IEnumerable<Order> GetOrderListByMemberId(int id);
     }
 }

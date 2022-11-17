@@ -501,5 +501,40 @@ namespace PRN211_Asm2_Salemanagement_WinApp
         {
             
         }
+
+        private void btnUpdateOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtOrderID.Text) || string.IsNullOrWhiteSpace(txtMemberID_Order.Text)
+                                                             || string.IsNullOrWhiteSpace(txtFreight.Text))
+            {
+                MessageBox.Show("Please enter all information");
+            }
+            else if (MemberRepo.GetMemberById(int.Parse(txtMemberID_Order.Text))==null)
+            {
+                MessageBox.Show("Member not exist");
+            }
+            else
+            {
+                Order o = OrderRepo.GetOrderById(int.Parse(txtOrderID.Text));
+                if(o == null)
+                {
+                    Order newOrder = new Order();
+                    newOrder.OrderId = int.Parse(txtMemberID_Order.Text);
+                    newOrder.MemberId = int.Parse(txtMemberID_Order.Text);
+                    newOrder.OrderDate = dtpOrderDate.Value;
+                    newOrder.RequiredDate = dtpRequiredDate.Value;
+                    newOrder.ShippedDate = dtpShippedDate.Value;
+                    newOrder.Freight = decimal.Parse(txtFreight.Text);
+                    OrderRepo.AddOrder(newOrder);
+                    MessageBox.Show("Add order complete");
+                    dgvProduct.DataSource = OrderRepo.GetAllOrders();
+                }
+            }
+        }
     }
 }

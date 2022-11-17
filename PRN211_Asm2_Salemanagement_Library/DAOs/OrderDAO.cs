@@ -174,5 +174,21 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
                 throw;
             }
         }
+
+        public IEnumerable<Order> GetOrderListByMemberId(int id)
+        {
+            try
+            {
+                using (var db = new SaleManagermentContext())
+                {
+                    return db.Orders.Where(o => o.MemberId == id).ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }
