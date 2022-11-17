@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using PRN211_Asm2_Salemanagement_Library.Models;
 
@@ -137,10 +138,14 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             bool result = false;
             try
             {
-                var db = new SaleManagermentContext();
-                db.Members.Update(member);
-                db.SaveChanges();
-                result = true;
+                if(member is not null)
+                {
+                    var db = new SaleManagermentContext();
+                    db.Entry(member).State = EntityState.Modified;
+                    db.SaveChanges();
+                    result = true;
+                }
+
             }
             catch (Exception e)
             {

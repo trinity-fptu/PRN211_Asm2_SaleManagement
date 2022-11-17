@@ -281,6 +281,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                     member.CompanyName = txtCompanyName.Text;
                     member.City = txtCity.Text;
                     member.Country = txtCountry.Text;
+                    member.Password = "123";
                     MemberRepo.UpdateMember(member);
                     MessageBox.Show("Member updated successfully");
                     //Refresh datagridview
@@ -445,8 +446,9 @@ namespace PRN211_Asm2_Salemanagement_WinApp
         {
             frmOrderDetail orderDetailForm = new frmOrderDetail
             {
-                OrderID = Int32.Parse(txtOrderID.Text)
+                //OrderID = Int32.Parse(txtOrderID.Text)
             };
+            orderDetailForm.Show();
         }
 
         private void btnMemberRefresh_Click(object sender, EventArgs e)
