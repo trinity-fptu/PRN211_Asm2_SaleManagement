@@ -63,6 +63,7 @@
             this.Controls.Add(this.btnBack);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmOrderDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOrderDetail";
             this.Load += new System.EventHandler(this.frmOrderDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).EndInit();

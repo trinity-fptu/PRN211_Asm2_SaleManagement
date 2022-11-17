@@ -1,4 +1,6 @@
-﻿using PRN211_Asm2_Salemanagement_Library.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
+using PRN211_Asm2_Salemanagement_Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -134,11 +136,16 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             {
                 using (var db = new SaleManagermentContext())
                 {
-                    var orderDetailToDelete = db.OrderDetails.Find(id);
+                    var orderDetailToDelete = db.OrderDetails
+                        .Where(x=>x.OrderId == id).ToList();
                     if (orderDetailToDelete != null)
                     {
-                        db.OrderDetails.Remove(orderDetailToDelete);
-                        db.SaveChanges();
+                        foreach (OrderDetail item in orderDetailToDelete)
+                        {
+                            var cmd = ("Delete from OrderDetail where OrderId = " + item.OrderId);
+                            db.Database.ExecuteSqlRaw(cmd);
+                            db.SaveChanges();
+                        }
                         return true;
                     }
                     else

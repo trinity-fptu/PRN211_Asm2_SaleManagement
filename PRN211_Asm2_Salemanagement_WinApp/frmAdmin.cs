@@ -536,5 +536,27 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                 }
             }
         }
+
+        private void btnDeleteOrder_Click(object sender, EventArgs e)
+        {
+                //Check if order exists
+                if (OrderRepo.GetOrderById(int.Parse(txtOrderID.Text)) == null)
+                {
+                    MessageBox.Show("Order not found");
+                }
+                else
+                {
+                    //Delete order detail
+                    OrderDetailRepo.DeleteOrderDetail(int.Parse(txtOrderID.Text));
+                    //Delete order
+                    OrderRepo.DeleteOrder(int.Parse(txtOrderID.Text));
+                    MessageBox.Show("Order deleted successfully");
+                    //Refresh datagridview
+                    using (var db = new SaleManagermentContext())
+                    {
+                        dgvOrder.DataSource = db.Orders.ToList();
+                    }
+                }
+        }
     }
 }
