@@ -53,8 +53,11 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             using (var db = new SaleManagermentContext())
             {
                 dgvMember.DataSource = db.Members.ToList();
+                this.dgvMember.Columns["Password"].Visible = false;
+                this.dgvMember.Columns["Orders"].Visible = false;
                 dgvProduct.DataSource = db.Products.ToList();
                 dgvOrder.DataSource = db.Orders.ToList();
+                this.dgvOrder.Columns["Member"].Visible = false;
                 //dgvOrderDetail.DataSource = db.OrderDetails.ToList();
                 rbMemberEmailSearch.Checked = true;
                 rbProductNameSearch.Checked = true;
@@ -78,7 +81,6 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             txtMemberID.Text = dgvMember.Rows[rowIndex].Cells[0].Value.ToString();
             txtEmail.Text = dgvMember.Rows[rowIndex].Cells[1].Value.ToString();
             txtCompanyName.Text = dgvMember.Rows[rowIndex].Cells[2].Value.ToString();
-            txtPassword.Text = dgvMember.Rows[rowIndex].Cells[5].Value.ToString();
             txtCity.Text = dgvMember.Rows[rowIndex].Cells[3].Value.ToString();
             txtCountry.Text = dgvMember.Rows[rowIndex].Cells[4].Value.ToString();
         }
@@ -394,9 +396,10 @@ namespace PRN211_Asm2_Salemanagement_WinApp
         private void btnLogout_Click(object sender, EventArgs e)
         {
             //Close and load login form
-            this.Close();
             frmLogin loginForm = new frmLogin();
             loginForm.Show();
+            this.Hide();
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -446,7 +449,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
         {
             frmOrderDetail orderDetailForm = new frmOrderDetail
             {
-                //OrderID = Int32.Parse(txtOrderID.Text)
+                OrderID = Int32.Parse(txtOrderID.Text)
             };
             orderDetailForm.Show();
         }

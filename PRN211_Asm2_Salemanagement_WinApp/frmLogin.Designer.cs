@@ -71,7 +71,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(102, 40);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(217, 23);
             this.txtEmail.TabIndex = 1;
@@ -79,7 +79,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(102, 74);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(217, 23);
@@ -88,7 +88,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(29, 121);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(78, 31);
             this.btnSubmit.TabIndex = 2;
@@ -99,7 +99,7 @@
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(234, 121);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(85, 31);
             this.btnExit.TabIndex = 2;
@@ -110,7 +110,7 @@
             // btnReset
             // 
             this.btnReset.Location = new System.Drawing.Point(134, 121);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 31);
             this.btnReset.TabIndex = 2;
@@ -131,8 +131,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.ResumeLayout(false);
             this.PerformLayout();

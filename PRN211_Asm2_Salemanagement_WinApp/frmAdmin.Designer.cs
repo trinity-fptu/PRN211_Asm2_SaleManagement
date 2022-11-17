@@ -258,7 +258,7 @@
             this.btnMemberSearch.Location = new System.Drawing.Point(219, 23);
             this.btnMemberSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberSearch.Name = "btnMemberSearch";
-            this.btnMemberSearch.Size = new System.Drawing.Size(78, 20);
+            this.btnMemberSearch.Size = new System.Drawing.Size(78, 23);
             this.btnMemberSearch.TabIndex = 14;
             this.btnMemberSearch.Text = "Search";
             this.btnMemberSearch.UseVisualStyleBackColor = true;
