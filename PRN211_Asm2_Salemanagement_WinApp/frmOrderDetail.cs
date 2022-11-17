@@ -16,7 +16,8 @@ namespace PRN211_Asm2_Salemanagement_WinApp
     public partial class frmOrderDetail : Form
     {
         IOrderDetailRepo orderDetailRepo = new OrderDetailRepo();
-        public frmOrderDetail(OrderDetail orderDetail)
+        public int OrderID { get; set; }
+        public frmOrderDetail()
         {
             InitializeComponent();
             

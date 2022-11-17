@@ -2357,23 +2357,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ICT\\.nuget\\packages\\": {},
+    "C:\\Users\\tlmin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT\\NET\\as2\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_WinApp\\PRN211_Asm2_Salemanagement_WinApp.csproj",
+      "projectUniqueName": "D:\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_WinApp\\PRN211_Asm2_Salemanagement_WinApp.csproj",
       "projectName": "PRN211_Asm2_Salemanagement_WinApp",
-      "projectPath": "E:\\FPT\\NET\\as2\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_WinApp\\PRN211_Asm2_Salemanagement_WinApp.csproj",
-      "packagesPath": "C:\\Users\\ICT\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT\\NET\\as2\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_WinApp\\obj\\",
+      "projectPath": "D:\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_WinApp\\PRN211_Asm2_Salemanagement_WinApp.csproj",
+      "packagesPath": "C:\\Users\\tlmin\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_WinApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ICT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tlmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2382,15 +2382,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "E:\\FPT\\NET\\as2\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_Library\\PRN211_Asm2_Salemanagement_Library.csproj": {
-              "projectPath": "E:\\FPT\\NET\\as2\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_Library\\PRN211_Asm2_Salemanagement_Library.csproj"
+            "D:\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_Library\\PRN211_Asm2_Salemanagement_Library.csproj": {
+              "projectPath": "D:\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_SaleManagement\\PRN211_Asm2_Salemanagement_Library\\PRN211_Asm2_Salemanagement_Library.csproj"
             }
           }
         }
@@ -2429,7 +2428,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

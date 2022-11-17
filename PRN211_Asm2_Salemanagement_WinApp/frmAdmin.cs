@@ -96,7 +96,35 @@ namespace PRN211_Asm2_Salemanagement_WinApp
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            int rowIndex = e.RowIndex;
+            txtOrderID.Text = dgvOrder.Rows[rowIndex].Cells[0].Value.ToString();
+            txtMemberID_Order.Text = dgvOrder.Rows[rowIndex].Cells[1].Value.ToString();
+            this.dtpOrderDate.Format = DateTimePickerFormat.Custom;
+            this.dtpOrderDate.CustomFormat = "dd-MM-yyyy";
+            dtpOrderDate.Text = dgvOrder.Rows[rowIndex].Cells[2].Value.ToString();
+            if (dgvOrder.Rows[rowIndex].Cells[3].Value == null)
+            {
+                this.dtpRequiredDate.Format = DateTimePickerFormat.Custom;
+                this.dtpRequiredDate.CustomFormat = " ";
+            }
+            else
+            {
+                this.dtpRequiredDate.Format = DateTimePickerFormat.Custom;
+                this.dtpRequiredDate.CustomFormat = "dd-MM-yyyy";
+                dtpRequiredDate.Text = dgvOrder.Rows[rowIndex].Cells[3].Value.ToString();
+            }
+            if (dgvOrder.Rows[rowIndex].Cells[4].Value == null)
+            {
+                this.dtpShippedDate.Format = DateTimePickerFormat.Custom;
+                this.dtpShippedDate.CustomFormat = " ";
+            }
+            else
+            {
+                this.dtpShippedDate.Format = DateTimePickerFormat.Custom;
+                this.dtpShippedDate.CustomFormat = "dd-MM-yyyy";
+                dtpShippedDate.Text = dgvOrder.Rows[rowIndex].Cells[4].Value.ToString();
+            }
+            txtFreight.Text = dgvOrder.Rows[rowIndex].Cells[5].Value.ToString();
         }
 
         private void btnMemberSearch_Click(object sender, EventArgs e)
@@ -415,7 +443,10 @@ namespace PRN211_Asm2_Salemanagement_WinApp
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
-
+            frmOrderDetail orderDetailForm = new frmOrderDetail
+            {
+                OrderID = Int32.Parse(txtOrderID.Text)
+            };
         }
 
         private void btnMemberRefresh_Click(object sender, EventArgs e)

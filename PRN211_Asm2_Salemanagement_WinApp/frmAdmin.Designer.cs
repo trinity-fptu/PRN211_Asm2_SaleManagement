@@ -201,7 +201,7 @@
             // txtMemberID
             // 
             this.txtMemberID.Location = new System.Drawing.Point(129, 34);
-            this.txtMemberID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMemberID.Margin = new System.Windows.Forms.Padding(2);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(136, 23);
             this.txtMemberID.TabIndex = 8;
@@ -209,7 +209,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(130, 70);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(135, 23);
             this.txtEmail.TabIndex = 9;
@@ -217,7 +217,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(130, 144);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(135, 23);
             this.txtPassword.TabIndex = 10;
@@ -225,7 +225,7 @@
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(129, 181);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(136, 23);
             this.txtCity.TabIndex = 11;
@@ -233,7 +233,7 @@
             // txtCountry
             // 
             this.txtCountry.Location = new System.Drawing.Point(129, 216);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(2);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(136, 23);
             this.txtCountry.TabIndex = 12;
@@ -245,9 +245,9 @@
             this.groupBox1.Controls.Add(this.rbMemberEmailSearch);
             this.groupBox1.Controls.Add(this.txtMemberSearch);
             this.groupBox1.Location = new System.Drawing.Point(273, 34);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(302, 85);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -256,7 +256,7 @@
             // btnMemberSearch
             // 
             this.btnMemberSearch.Location = new System.Drawing.Point(219, 23);
-            this.btnMemberSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMemberSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberSearch.Name = "btnMemberSearch";
             this.btnMemberSearch.Size = new System.Drawing.Size(78, 20);
             this.btnMemberSearch.TabIndex = 14;
@@ -268,7 +268,7 @@
             // 
             this.rbMemberIDSearch.AutoSize = true;
             this.rbMemberIDSearch.Location = new System.Drawing.Point(97, 55);
-            this.rbMemberIDSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMemberIDSearch.Margin = new System.Windows.Forms.Padding(2);
             this.rbMemberIDSearch.Name = "rbMemberIDSearch";
             this.rbMemberIDSearch.Size = new System.Drawing.Size(52, 19);
             this.rbMemberIDSearch.TabIndex = 2;
@@ -280,7 +280,7 @@
             // 
             this.rbMemberEmailSearch.AutoSize = true;
             this.rbMemberEmailSearch.Location = new System.Drawing.Point(4, 55);
-            this.rbMemberEmailSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMemberEmailSearch.Margin = new System.Windows.Forms.Padding(2);
             this.rbMemberEmailSearch.Name = "rbMemberEmailSearch";
             this.rbMemberEmailSearch.Size = new System.Drawing.Size(70, 19);
             this.rbMemberEmailSearch.TabIndex = 1;
@@ -291,7 +291,7 @@
             // txtMemberSearch
             // 
             this.txtMemberSearch.Location = new System.Drawing.Point(4, 23);
-            this.txtMemberSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMemberSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtMemberSearch.Name = "txtMemberSearch";
             this.txtMemberSearch.Size = new System.Drawing.Size(204, 23);
             this.txtMemberSearch.TabIndex = 0;
@@ -303,9 +303,9 @@
             this.groupBox2.Controls.Add(this.cbFilterByCity);
             this.groupBox2.Controls.Add(this.cbFilterByCountry);
             this.groupBox2.Location = new System.Drawing.Point(273, 123);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(302, 116);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
@@ -335,7 +335,7 @@
             // 
             this.cbFilterByCity.FormattingEnabled = true;
             this.cbFilterByCity.Location = new System.Drawing.Point(4, 55);
-            this.cbFilterByCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFilterByCity.Margin = new System.Windows.Forms.Padding(2);
             this.cbFilterByCity.Name = "cbFilterByCity";
             this.cbFilterByCity.Size = new System.Drawing.Size(204, 23);
             this.cbFilterByCity.TabIndex = 1;
@@ -345,7 +345,7 @@
             // 
             this.cbFilterByCountry.FormattingEnabled = true;
             this.cbFilterByCountry.Location = new System.Drawing.Point(4, 23);
-            this.cbFilterByCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFilterByCountry.Margin = new System.Windows.Forms.Padding(2);
             this.cbFilterByCountry.Name = "cbFilterByCountry";
             this.cbFilterByCountry.Size = new System.Drawing.Size(204, 23);
             this.cbFilterByCountry.TabIndex = 0;
@@ -355,10 +355,11 @@
             // 
             this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMember.Location = new System.Drawing.Point(579, 34);
-            this.dgvMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMember.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMember.Name = "dgvMember";
             this.dgvMember.RowHeadersWidth = 62;
             this.dgvMember.RowTemplate.Height = 33;
+            this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMember.Size = new System.Drawing.Size(456, 205);
             this.dgvMember.TabIndex = 14;
             this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
@@ -366,7 +367,7 @@
             // btnMemberAdd
             // 
             this.btnMemberAdd.Location = new System.Drawing.Point(1039, 34);
-            this.btnMemberAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMemberAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberAdd.Name = "btnMemberAdd";
             this.btnMemberAdd.Size = new System.Drawing.Size(78, 25);
             this.btnMemberAdd.TabIndex = 15;
@@ -377,7 +378,7 @@
             // btnMemberUpdate
             // 
             this.btnMemberUpdate.Location = new System.Drawing.Point(1039, 68);
-            this.btnMemberUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMemberUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberUpdate.Name = "btnMemberUpdate";
             this.btnMemberUpdate.Size = new System.Drawing.Size(78, 25);
             this.btnMemberUpdate.TabIndex = 16;
@@ -388,7 +389,7 @@
             // btnMemberDelete
             // 
             this.btnMemberDelete.Location = new System.Drawing.Point(1039, 104);
-            this.btnMemberDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMemberDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberDelete.Name = "btnMemberDelete";
             this.btnMemberDelete.Size = new System.Drawing.Size(78, 23);
             this.btnMemberDelete.TabIndex = 17;
@@ -459,7 +460,7 @@
             // txtProductID
             // 
             this.txtProductID.Location = new System.Drawing.Point(129, 313);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(136, 23);
             this.txtProductID.TabIndex = 24;
@@ -467,7 +468,7 @@
             // txtCategoryID
             // 
             this.txtCategoryID.Location = new System.Drawing.Point(129, 346);
-            this.txtCategoryID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCategoryID.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategoryID.Name = "txtCategoryID";
             this.txtCategoryID.Size = new System.Drawing.Size(136, 23);
             this.txtCategoryID.TabIndex = 25;
@@ -475,7 +476,7 @@
             // txtProductName
             // 
             this.txtProductName.Location = new System.Drawing.Point(129, 380);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(136, 23);
             this.txtProductName.TabIndex = 26;
@@ -483,7 +484,7 @@
             // txtWeight
             // 
             this.txtWeight.Location = new System.Drawing.Point(129, 411);
-            this.txtWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtWeight.Margin = new System.Windows.Forms.Padding(2);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(136, 23);
             this.txtWeight.TabIndex = 27;
@@ -491,7 +492,7 @@
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(129, 442);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(136, 23);
             this.txtUnitPrice.TabIndex = 28;
@@ -499,7 +500,7 @@
             // txtUnitsInStock
             // 
             this.txtUnitsInStock.Location = new System.Drawing.Point(129, 473);
-            this.txtUnitsInStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUnitsInStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtUnitsInStock.Name = "txtUnitsInStock";
             this.txtUnitsInStock.Size = new System.Drawing.Size(136, 23);
             this.txtUnitsInStock.TabIndex = 29;
@@ -517,9 +518,9 @@
             this.groupBox3.Controls.Add(this.txtFromInput);
             this.groupBox3.Controls.Add(this.txtProductSearch);
             this.groupBox3.Location = new System.Drawing.Point(273, 306);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(302, 188);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
@@ -528,7 +529,7 @@
             // btnProductSearch
             // 
             this.btnProductSearch.Location = new System.Drawing.Point(219, 17);
-            this.btnProductSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductSearch.Name = "btnProductSearch";
             this.btnProductSearch.Size = new System.Drawing.Size(78, 24);
             this.btnProductSearch.TabIndex = 31;
@@ -540,7 +541,7 @@
             // 
             this.rbUnitsInStockSeach.AutoSize = true;
             this.rbUnitsInStockSeach.Location = new System.Drawing.Point(97, 135);
-            this.rbUnitsInStockSeach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbUnitsInStockSeach.Margin = new System.Windows.Forms.Padding(2);
             this.rbUnitsInStockSeach.Name = "rbUnitsInStockSeach";
             this.rbUnitsInStockSeach.Size = new System.Drawing.Size(97, 19);
             this.rbUnitsInStockSeach.TabIndex = 31;
@@ -552,7 +553,7 @@
             // 
             this.rbUnitPriceSearch.AutoSize = true;
             this.rbUnitPriceSearch.Location = new System.Drawing.Point(4, 135);
-            this.rbUnitPriceSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbUnitPriceSearch.Margin = new System.Windows.Forms.Padding(2);
             this.rbUnitPriceSearch.Name = "rbUnitPriceSearch";
             this.rbUnitPriceSearch.Size = new System.Drawing.Size(76, 19);
             this.rbUnitPriceSearch.TabIndex = 31;
@@ -584,7 +585,7 @@
             // 
             this.rbProductIDSearch.AutoSize = true;
             this.rbProductIDSearch.Location = new System.Drawing.Point(97, 55);
-            this.rbProductIDSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbProductIDSearch.Margin = new System.Windows.Forms.Padding(2);
             this.rbProductIDSearch.Name = "rbProductIDSearch";
             this.rbProductIDSearch.Size = new System.Drawing.Size(52, 19);
             this.rbProductIDSearch.TabIndex = 32;
@@ -596,7 +597,7 @@
             // 
             this.rbProductNameSearch.AutoSize = true;
             this.rbProductNameSearch.Location = new System.Drawing.Point(4, 55);
-            this.rbProductNameSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbProductNameSearch.Margin = new System.Windows.Forms.Padding(2);
             this.rbProductNameSearch.Name = "rbProductNameSearch";
             this.rbProductNameSearch.Size = new System.Drawing.Size(73, 19);
             this.rbProductNameSearch.TabIndex = 31;
@@ -607,7 +608,7 @@
             // txtToInput
             // 
             this.txtToInput.Location = new System.Drawing.Point(153, 99);
-            this.txtToInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtToInput.Margin = new System.Windows.Forms.Padding(2);
             this.txtToInput.Name = "txtToInput";
             this.txtToInput.Size = new System.Drawing.Size(144, 23);
             this.txtToInput.TabIndex = 1;
@@ -615,7 +616,7 @@
             // txtFromInput
             // 
             this.txtFromInput.Location = new System.Drawing.Point(4, 99);
-            this.txtFromInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFromInput.Margin = new System.Windows.Forms.Padding(2);
             this.txtFromInput.Name = "txtFromInput";
             this.txtFromInput.Size = new System.Drawing.Size(145, 23);
             this.txtFromInput.TabIndex = 1;
@@ -623,7 +624,7 @@
             // txtProductSearch
             // 
             this.txtProductSearch.Location = new System.Drawing.Point(4, 18);
-            this.txtProductSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductSearch.Name = "txtProductSearch";
             this.txtProductSearch.Size = new System.Drawing.Size(204, 23);
             this.txtProductSearch.TabIndex = 0;
@@ -632,10 +633,11 @@
             // 
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Location = new System.Drawing.Point(579, 306);
-            this.dgvProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowHeadersWidth = 62;
             this.dgvProduct.RowTemplate.Height = 33;
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(456, 188);
             this.dgvProduct.TabIndex = 14;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
@@ -643,7 +645,7 @@
             // btnProductAdd
             // 
             this.btnProductAdd.Location = new System.Drawing.Point(1039, 306);
-            this.btnProductAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductAdd.Name = "btnProductAdd";
             this.btnProductAdd.Size = new System.Drawing.Size(78, 25);
             this.btnProductAdd.TabIndex = 15;
@@ -654,7 +656,7 @@
             // btnProductUpdate
             // 
             this.btnProductUpdate.Location = new System.Drawing.Point(1039, 339);
-            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductUpdate.Name = "btnProductUpdate";
             this.btnProductUpdate.Size = new System.Drawing.Size(78, 25);
             this.btnProductUpdate.TabIndex = 16;
@@ -665,7 +667,7 @@
             // btnProductDelete
             // 
             this.btnProductDelete.Location = new System.Drawing.Point(1039, 373);
-            this.btnProductDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductDelete.Name = "btnProductDelete";
             this.btnProductDelete.Size = new System.Drawing.Size(78, 25);
             this.btnProductDelete.TabIndex = 17;
@@ -716,7 +718,7 @@
             // txtOrderID
             // 
             this.txtOrderID.Location = new System.Drawing.Point(129, 558);
-            this.txtOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(2);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(136, 23);
             this.txtOrderID.TabIndex = 32;
@@ -724,7 +726,7 @@
             // txtMemberID_Order
             // 
             this.txtMemberID_Order.Location = new System.Drawing.Point(129, 591);
-            this.txtMemberID_Order.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMemberID_Order.Margin = new System.Windows.Forms.Padding(2);
             this.txtMemberID_Order.Name = "txtMemberID_Order";
             this.txtMemberID_Order.Size = new System.Drawing.Size(136, 23);
             this.txtMemberID_Order.TabIndex = 32;
@@ -737,9 +739,9 @@
             this.groupBox4.Controls.Add(this.dtpEndDate);
             this.groupBox4.Controls.Add(this.dtpStartDate);
             this.groupBox4.Location = new System.Drawing.Point(273, 558);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(302, 191);
             this.groupBox4.TabIndex = 33;
             this.groupBox4.TabStop = false;
@@ -748,7 +750,7 @@
             // btnOrderSearch
             // 
             this.btnOrderSearch.Location = new System.Drawing.Point(219, 153);
-            this.btnOrderSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrderSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderSearch.Name = "btnOrderSearch";
             this.btnOrderSearch.Size = new System.Drawing.Size(78, 23);
             this.btnOrderSearch.TabIndex = 31;
@@ -779,7 +781,7 @@
             // dtpEndDate
             // 
             this.dtpEndDate.Location = new System.Drawing.Point(4, 103);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(211, 23);
             this.dtpEndDate.TabIndex = 0;
@@ -787,7 +789,7 @@
             // dtpStartDate
             // 
             this.dtpStartDate.Location = new System.Drawing.Point(4, 49);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(211, 23);
             this.dtpStartDate.TabIndex = 0;
@@ -796,10 +798,11 @@
             // 
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Location = new System.Drawing.Point(579, 558);
-            this.dgvOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvOrder.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 62;
             this.dgvOrder.RowTemplate.Height = 33;
+            this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrder.Size = new System.Drawing.Size(456, 209);
             this.dgvOrder.TabIndex = 14;
             this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
@@ -808,7 +811,7 @@
             // btnLogout
             // 
             this.btnLogout.Location = new System.Drawing.Point(957, 784);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(78, 28);
             this.btnLogout.TabIndex = 34;
@@ -819,7 +822,7 @@
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(1039, 784);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(78, 28);
             this.btnExit.TabIndex = 34;
@@ -850,7 +853,7 @@
             // txtFreight
             // 
             this.txtFreight.Location = new System.Drawing.Point(129, 726);
-            this.txtFreight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFreight.Margin = new System.Windows.Forms.Padding(2);
             this.txtFreight.Name = "txtFreight";
             this.txtFreight.Size = new System.Drawing.Size(136, 23);
             this.txtFreight.TabIndex = 32;
@@ -858,7 +861,7 @@
             // dtpOrderDate
             // 
             this.dtpOrderDate.Location = new System.Drawing.Point(129, 626);
-            this.dtpOrderDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpOrderDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpOrderDate.Name = "dtpOrderDate";
             this.dtpOrderDate.Size = new System.Drawing.Size(136, 23);
             this.dtpOrderDate.TabIndex = 0;
@@ -866,7 +869,7 @@
             // dtpRequiredDate
             // 
             this.dtpRequiredDate.Location = new System.Drawing.Point(129, 659);
-            this.dtpRequiredDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpRequiredDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpRequiredDate.Name = "dtpRequiredDate";
             this.dtpRequiredDate.Size = new System.Drawing.Size(136, 23);
             this.dtpRequiredDate.TabIndex = 0;
@@ -874,7 +877,7 @@
             // dtpShippedDate
             // 
             this.dtpShippedDate.Location = new System.Drawing.Point(129, 695);
-            this.dtpShippedDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpShippedDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpShippedDate.Name = "dtpShippedDate";
             this.dtpShippedDate.Size = new System.Drawing.Size(136, 23);
             this.dtpShippedDate.TabIndex = 0;
@@ -882,7 +885,7 @@
             // btnDetail
             // 
             this.btnDetail.Location = new System.Drawing.Point(1039, 556);
-            this.btnDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDetail.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(78, 25);
             this.btnDetail.TabIndex = 35;
@@ -903,7 +906,7 @@
             // txtCompanyName
             // 
             this.txtCompanyName.Location = new System.Drawing.Point(130, 105);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(2);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(135, 23);
             this.txtCompanyName.TabIndex = 9;
@@ -911,7 +914,7 @@
             // btnProductRefresh
             // 
             this.btnProductRefresh.Location = new System.Drawing.Point(1039, 468);
-            this.btnProductRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductRefresh.Name = "btnProductRefresh";
             this.btnProductRefresh.Size = new System.Drawing.Size(78, 25);
             this.btnProductRefresh.TabIndex = 36;
@@ -922,7 +925,7 @@
             // btnOrderRefresh
             // 
             this.btnOrderRefresh.Location = new System.Drawing.Point(1039, 742);
-            this.btnOrderRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrderRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderRefresh.Name = "btnOrderRefresh";
             this.btnOrderRefresh.Size = new System.Drawing.Size(78, 25);
             this.btnOrderRefresh.TabIndex = 36;
@@ -933,7 +936,7 @@
             // btnMemberRefresh
             // 
             this.btnMemberRefresh.Location = new System.Drawing.Point(1039, 214);
-            this.btnMemberRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMemberRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnMemberRefresh.Name = "btnMemberRefresh";
             this.btnMemberRefresh.Size = new System.Drawing.Size(78, 25);
             this.btnMemberRefresh.TabIndex = 36;
@@ -1004,7 +1007,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
