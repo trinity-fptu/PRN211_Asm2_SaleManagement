@@ -67,6 +67,16 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             }
         }
 
+        public OrderDetail GetOrderDetailByProductId(int ProductId)
+        {
+            using (var db = new SaleManagermentContext())
+            {
+                OrderDetail od =  db.OrderDetails.Where(x=>x.ProductId == ProductId).FirstOrDefault();
+                return od;
+            }
+        }
+
+
         //Add order detail
         public bool AddOrderDetail(OrderDetail orderDetail)
         {

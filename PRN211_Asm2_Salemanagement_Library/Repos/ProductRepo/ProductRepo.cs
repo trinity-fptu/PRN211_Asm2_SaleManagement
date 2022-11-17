@@ -12,6 +12,8 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.ProductRepo
     {
         public bool AddProduct(Product product) => ProductDAO.Instance.AddProduct(product);
 
+        public bool CheckIdDuplicated(int id) => ProductDAO.Instance.CheckIdDuplicated(id);
+
         public bool DeleteProduct(int id) => ProductDAO.Instance.DeleteProduct(id);
 
         public IEnumerable<Product> GetAllProducts() => ProductDAO.Instance.GetAllProducts();

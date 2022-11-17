@@ -19,5 +19,7 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.ProductRepo
         public IEnumerable<Product> SearchProductById(int id);
         public IEnumerable<Product> SearchProductByPriceRange(int min, int max);
         public IEnumerable<Product> SearchProductByUnitInStockRange(int min, int max);
+
+        public bool CheckIdDuplicated(int id);
     }
 }

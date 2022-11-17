@@ -18,6 +18,8 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.OrderRepo
 
         public Order GetOrderById(int id) => OrderDAO.Instance.GetOrderById(id);
 
+        public Order GetOrderByMemberId(int id) => OrderDAO.Instance.GetOrderByMemberId(id);
+
         public IEnumerable<Order> GetOrdersByDateRange(DateTime startDate, DateTime endDate) =>
             OrderDAO.Instance.SearchOrderByDateRange(startDate, endDate);
 

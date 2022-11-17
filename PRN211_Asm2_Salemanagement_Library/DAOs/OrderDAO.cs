@@ -50,6 +50,16 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
             }
         }
 
+        public Order GetOrderByMemberId(int memberId)
+        {
+            using (var db = new SaleManagermentContext())
+            {
+                Order od = db.Orders.Where(x => x.MemberId == memberId).FirstOrDefault();
+                return od; 
+            }
+        }
+
+
         //Get order by id
         public Order GetOrderById(int id)
         {

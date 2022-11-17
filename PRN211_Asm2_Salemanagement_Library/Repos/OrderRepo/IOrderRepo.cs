@@ -15,5 +15,7 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.OrderRepo
         public bool AddOrder(Order order);
         public bool UpdateOrder(Order order);
         public bool DeleteOrder(int id);
+
+        public Order GetOrderByMemberId(int id);
     }
 }

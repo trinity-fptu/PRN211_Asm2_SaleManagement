@@ -172,5 +172,15 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
                 return db.Products.Where(p => p.UnitslnStock >= min && p.UnitslnStock <= max).ToList();
             }
         }
+
+        public bool CheckIdDuplicated(int id)
+        {
+
+            using (var db = new SaleManagermentContext())
+            {
+                bool check = db.Products.Where(x=>x.ProductId== id).Any();
+                return check;
+            }
+        }
     }
 }

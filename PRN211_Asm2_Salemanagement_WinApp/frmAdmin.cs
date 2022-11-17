@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoMapper;
+using PRN211_Asm2_Salemanagement_Library.DAOs;
 using PRN211_Asm2_Salemanagement_Library.Models;
 using PRN211_Asm2_Salemanagement_Library.Repos.MemberRepo;
 using PRN211_Asm2_Salemanagement_Library.Repos.OrderDetailRepo;
@@ -36,7 +37,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             MemberRepo = new MemberRepo();
             ProductRepo = new ProductRepo();
             OrderRepo = new OrderRepo();
-            //OrderDetailRepo = new OrderDetailRepo();
+            OrderDetailRepo = new OrderDetailRepo();
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Member, MemberMapper>();
@@ -300,6 +301,10 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             {
                 MessageBox.Show("Please enter all information");
             }
+            else if(OrderRepo.GetOrderByMemberId(int.Parse(txtMemberID.Text)) != null)
+            {
+                MessageBox.Show("Order with member exist, delete order first");
+            }
             else
             {
                 //Check member is existed
@@ -323,6 +328,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
 
         private void btnProductAdd_Click(object sender, EventArgs e)
         {
+            Product product = new Product();
             //Check if textbox is null 
             if (string.IsNullOrWhiteSpace(txtProductID.Text) || string.IsNullOrWhiteSpace(txtCategoryID.Text) 
                                                              || string.IsNullOrWhiteSpace(txtProductName.Text) 
@@ -332,10 +338,12 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             {
                 MessageBox.Show("Please enter all information");
             }
+            else if (ProductRepo.CheckIdDuplicated(int.Parse(txtProductID.Text))){
+                MessageBox.Show("Id is duplicated");
+            }
             else
             {
                 //Add product
-                Product product = new Product();
                 product.ProductId = int.Parse(txtProductID.Text);
                 product.CategoryId = int.Parse(txtCategoryID.Text);
                 product.ProductName = txtProductName.Text;
@@ -367,7 +375,7 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                 product.CategoryId = int.Parse(txtCategoryID.Text);
                 product.ProductName = txtProductName.Text;
                 product.Weight = txtWeight.Text;
-                product.UnitPrice = int.Parse(txtUnitPrice.Text);
+                product.UnitPrice = decimal.Parse(txtUnitPrice.Text);
                 product.UnitslnStock = int.Parse(txtUnitsInStock.Text);
                 ProductRepo.UpdateProduct(product);
                 MessageBox.Show("Product updated successfully");
@@ -385,9 +393,17 @@ namespace PRN211_Asm2_Salemanagement_WinApp
             else
             {
                 //Delete product
-                ProductRepo.DeleteProduct(int.Parse(txtProductID.Text));
-                MessageBox.Show("Product deleted successfully");
-                dgvProduct.DataSource = ProductRepo.GetAllProducts();
+                OrderDetail a = OrderDetailRepo.GetOrderDetailByProductId(int.Parse(txtProductID.Text));
+                if(a is not null)
+                {
+                    MessageBox.Show("Delete order detail with this product first");
+                }
+                else
+                {
+                    ProductRepo.DeleteProduct(int.Parse(txtProductID.Text));
+                    MessageBox.Show("Product deleted successfully");
+                    dgvProduct.DataSource = ProductRepo.GetAllProducts();
+                }
             }
         }
 

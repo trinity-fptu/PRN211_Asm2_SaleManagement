@@ -14,5 +14,9 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.OrderDetailRepo
         public bool AddOrderDetail(OrderDetail orderDetail);
         public bool UpdateOrderDetail(OrderDetail orderDetail);
         public bool DeleteOrderDetail(int id);
+
+        public OrderDetail GetOrderDetailByProductId(int id);
+
+
     }
 }
