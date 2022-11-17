@@ -62,14 +62,15 @@ namespace PRN211_Asm2_Salemanagement_WinApp
                 dtpStartDate.Value = DateTime.Now;
                 dtpEndDate.Value = DateTime.Now;
                 //Get city list and country list from database
-                var cityList = MemberRepo.GetCityList();
-                var countryList = MemberRepo.GetCountryList();
-                //Display city list and country list to combobox
-                cbFilterByCity.DataSource = cityList;
+                var countryList = MemberRepo.GetCountryList().ToArray();
+                cbFilterByCountry.Items.AddRange(countryList);
+                
             }
 
 
         }
+
+       
 
         private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -377,10 +378,38 @@ namespace PRN211_Asm2_Salemanagement_WinApp
 
         private void cbFilterByCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
+            using (var db = new SaleManagermentContext())
+            {
+                var member = MemberRepo.FilterMemberByCountry(cbFilterByCountry.GetItemText(this.cbFilterByCountry.SelectedItem));
+                if (member.Count() > 0)
+                {
+                    dgvMember.DataSource = member.ToList();
+                    var cityList = MemberRepo.GetCityList(cbFilterByCountry.GetItemText(this.cbFilterByCountry.SelectedItem)).ToArray();
+                    cbFilterByCity.Items.Clear();
+                    cbFilterByCity.Items.AddRange(cityList);
+
+                }
+                else
+                {
+                    dgvMember.DataSource = db.Members.ToList();
+                }
+            }
         }
 
         private void cbFilterByCity_SelectedIndexChanged(object sender, EventArgs e)
         {
+            using (var db = new SaleManagermentContext())
+            {
+                var member = MemberRepo.FilterMemberByCity(cbFilterByCity.GetItemText(this.cbFilterByCity.SelectedItem), cbFilterByCountry.GetItemText(this.cbFilterByCountry.SelectedItem));
+                if (member.Count() > 0)
+                {
+                    dgvMember.DataSource = member.ToList();
+                }
+                else
+                {
+                    dgvMember.DataSource = db.Members.ToList();
+                }
+            }
 
         }
 

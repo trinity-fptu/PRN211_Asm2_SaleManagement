@@ -201,13 +201,13 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
         }
 
         //Get city list
-        public IEnumerable<string> GetCityList()
+        public IEnumerable<string> GetCityList(string country)
         {
             IEnumerable<string> cities = null;
             try
             {
                 var db = new SaleManagermentContext();
-                cities = db.Members.Select(m => m.City).Distinct();
+                cities = db.Members.Where(x=>x.Country==country).Select(m => m.City).Distinct();
             }
             catch (Exception e)
             {
@@ -233,13 +233,13 @@ namespace PRN211_Asm2_Salemanagement_Library.DAOs
         }
 
         //Filter member by city
-        public IEnumerable<Member> FilterMemberByCity(string city)
+        public IEnumerable<Member> FilterMemberByCity(string city, string country)
         {
             IEnumerable<Member> members = null;
             try
             {
                 var db = new SaleManagermentContext();
-                members = db.Members.Where(m => m.City == city);
+                members = db.Members.Where(m => m.City == city && m.Country == country);
             }
             catch (Exception e)
             {

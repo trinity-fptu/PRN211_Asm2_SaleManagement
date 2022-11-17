@@ -28,16 +28,17 @@ namespace PRN211_Asm2_Salemanagement_Library.Repos.MemberRepo
 
         public IEnumerable<Member> SearchMemberByEmail(string email) => MemberDAO.Instance.SearchMemberByEmail(email);
 
-        public IEnumerable<string> GetCityList() => MemberDAO.Instance.GetCityList();
+        public IEnumerable<string> GetCityList(string country) => MemberDAO.Instance.GetCityList(country);
 
         public IEnumerable<string> GetCountryList() => MemberDAO.Instance.GetCountryList();
 
-        public IEnumerable<Member> FilterMemberByCity(string city) => MemberDAO.Instance.FilterMemberByCity(city);
+        public IEnumerable<Member> FilterMemberByCity(string city, string country) => MemberDAO.Instance.FilterMemberByCity(city, country);
 
         public IEnumerable<Member> FilterMemberByCountry(string country) => MemberDAO.Instance.FilterMemberByCountry(country);
 
         public bool CheckDuplicateEmail(string email) => MemberDAO.Instance.CheckDuplicateEmail(email);
 
         public bool CheckDuplicateId(int id) => MemberDAO.Instance.CheckDuplicateId(id);
+
     }
 }
